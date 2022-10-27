@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - routing between Home.js and Duncan.js
 - DuncanService.js is Parse Model for Dorm class
 - Navigation.js to navigate between pages
+- CSS Styling with styles.css
 ### Changed
 - Main.js, Header.js, and Main.js reincorporated into new modules 
 - Food.js turned into FoodService.js
