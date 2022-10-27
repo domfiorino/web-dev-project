@@ -10,15 +10,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  
  
 ### Added
- 
+- Parse initialization and separate Parse models for each class
+- Home.js, HomeForm.js, HomeList.js, Duncan.js, DuncanForm.js, and DuncanList.js
+- routing between Home.js and Duncan.js
+- DuncanService.js is Parse Model for Dorm class
 ### Changed
-  
+- Main.js, Header.js, and Main.js reincorporated into new modules 
+- Food.js turned into FoodService.js
  
 ## [0.1.0] - 2022-10-05
  
 ### Added
 - foodsDuncan.json created to hold data for the menu items
 - Food.js service to interact with local foodsDuncan.json data using axios
-- Main.js parent component to Header.js
-- Header.js child component to Main.js and parent to OrderForm.js
+- Main.js contains parent component to Header.js
+- Header.js contains child component to Main.js and parent to OrderForm.js
  
