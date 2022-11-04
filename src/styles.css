@@ -1,0 +1,33 @@
+.navigation {
+    font-family: sans-serif;
+  
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+  
+    list-style: none;
+    margin: 0;
+    background-color: darkgreen;
+  }
+  
+  /* This is what takes away the stying from default settings*/
+  .navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+    font-family: "Trirong", sans-serif;
+  }
+  
+  /* This is what allows the hover feature */
+  .navigation a:hover {
+    background: black;
+  }
+  
+  @media all and (max-width: 800px) {
+    .navigation {
+      flex-flow: column wrap;
+      padding: 0;
+    }
+  }
+  
