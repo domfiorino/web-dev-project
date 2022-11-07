@@ -7,21 +7,18 @@ const DuncanMenu = ({ onChange, onClick }) => {
       <hr />
       <b>
         {" "}
-        Please enter the food item you would like to order, followed by your
-        name.{" "}
+        Please enter the name for the order.{" "}
       </b>
 
-      <form>
-        <input placeholder="Food" onChange={onChange} />
-
-        <input placeholder="Name" onChange={onChange} />
+      <div>
+        <input id="duncan_name" placeholder="Name" onChange={onChange} />
         <br></br>
         <br></br>
         <div></div>
         <button type="submit" onClick={onClick}>
           Submit
         </button>
-      </form>
+      </div>
     </div>
   );
 };

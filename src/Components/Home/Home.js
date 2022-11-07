@@ -5,7 +5,7 @@ import HomeList from "./HomeList";
 export default function HomeModule() {
   return (
     <div>
-      <hr />
+      
       <h1> Home </h1>
 
       <HomeList />
