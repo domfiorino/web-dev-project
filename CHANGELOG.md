@@ -9,9 +9,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.3.0] - 2022-11-09 
  
 ### Added
-- 
+- Protected Routes for "/" and "/Duncan" - cannot be navigated to without authentication
+- Protected routes redirect to the auth component
+- User cannot route to auth if already logged in
+- Placed authentication methods in separate service and user manually typing in URL to protected route will redirect if unauthenticated
+
 ### Changed
-- 
+- Update navigation bar to be nested in <a> tags instead of being in a list
+- Changed listing of items in DuncanForm to checkboxes
+- Alert user that order has been submitted in DuncanForm
  
 ## [0.2.0] - 2022-10-26 
  
