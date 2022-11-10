@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { checkUser } from "../../Common/Services/AuthService";
 
 // You can pass props using the spread operator to throw them on an object if there are too many to break out
@@ -7,7 +7,7 @@ const ProtectedRoute = ({ element: Component, ...rest }) => {
   console.log("element: ", Component);
   const navigate = useNavigate();
   const goBackHandler = () => {
-    Navigate("/auth");
+    navigate("/auth");
   };
   if (checkUser()) {
     return <Component />;
