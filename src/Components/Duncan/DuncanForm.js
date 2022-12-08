@@ -16,6 +16,7 @@ const DuncanForm = () => {
     getAllFoods().then((foods) => {
       console.log(foods);
       setFoods(foods);
+            
     });
 
     // getById("OXsgE8Mhjc").then((food) => {
