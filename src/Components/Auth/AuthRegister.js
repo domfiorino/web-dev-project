@@ -10,7 +10,8 @@ const AuthRegister = () => {
     firstName: "",
     lastName: "",
     email: "",
-    password: ""
+    password: "",
+    accountType: "user"
   });
 
   // flags in the state to watch for add/remove updates
@@ -43,9 +44,9 @@ const AuthRegister = () => {
 
   const onChangeHandler = (e) => {
     e.preventDefault();
-    console.log(e.target);
+    console.log("e.target: ", e.target);
     const { name, value: newValue } = e.target;
-    console.log(newValue);
+    console.log("newValue: ", newValue);
 
     setNewUser({
       ...newUser,

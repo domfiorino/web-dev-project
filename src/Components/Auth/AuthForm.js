@@ -1,11 +1,19 @@
 import React from "react";
 
 const AuthForm = ({ user, isLogin, onChange, onSubmit }) => {
-
+  console.log("user: ", user);
   return (
     <form onSubmit={onSubmit} autoComplete="off">
     {!isLogin ? 
     <div>
+        <div className="form-group">
+          <label>Account Type</label>
+          <br />
+          <select name="accountType" id="account-type" onChange={onChange} >
+            <option value="user">User</option>
+            <option value="admin">Administrator</option>
+          </select>
+        </div>
         <div className="form-group">
           <label>First Name</label>
           <br />

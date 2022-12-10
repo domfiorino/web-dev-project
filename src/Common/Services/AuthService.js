@@ -9,6 +9,7 @@ export const createUser = (newUser) => {
   user.set("lastName", newUser.lastName);
   user.set("password", newUser.password);
   user.set("email", newUser.email);
+  user.set("accountType", newUser.accountType);
 
   console.log("User: ", user);
   return user
@@ -41,5 +42,6 @@ export const loginUser = (currUser) => {
 };
 
 export const checkUser = () => {
+  console.log("inside checkUser");
   return Parse.User.current()?.authenticated;
 };

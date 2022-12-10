@@ -7,6 +7,11 @@ import AuthModule from "./Auth/Auth.js";
 import AuthRegister from "./Auth/AuthRegister";
 import AuthLogin from "./Auth/AuthLogin";
 import ProtectedRoute from "./ProtectedRoute/ProtectedRoute.js";
+
+import { ChatSetup } from "./LiveChat/ChatSetup.js";
+
+import OrdersModule from "./Orders/Orders.js";
+
 // import BrowserRouter as alias
 import { BrowserRouter as Router, Navigate, Routes, Route } from "react-router-dom";
 
@@ -22,7 +27,17 @@ const Components = () => {
         {/* Duncan menu page - page 2 */}
         <Route 
           path="/Duncan" 
-          element={<ProtectedRoute path="/" element={DuncanModule} />}
+          element={<ProtectedRoute path="/Duncan" element={DuncanModule} />}
+        />
+        {/* Order Update Live Chat Page */}
+        <Route 
+          path="/chat" 
+          element={<ProtectedRoute path="/chat" element={ChatSetup} />}
+        />
+        {/* Admin Orders Page */}
+        <Route 
+          path="/orders" 
+          element={<ProtectedRoute path="/orders" element={OrdersModule} />}
         />
         {/* Auth page */}
         <Route path="/auth" element={<AuthModule />} />

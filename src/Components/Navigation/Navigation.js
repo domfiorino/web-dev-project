@@ -24,6 +24,9 @@ const NavigationModule = () => (
     <a>
       <Link to="/">Home Page</Link>
     </a>
+    <a>
+      <Link to="/chat">Order Updates Chat</Link>
+    </a>
   </div>
 );
 

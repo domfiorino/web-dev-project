@@ -28,22 +28,22 @@ const DuncanForm = () => {
   const onClickHandler = (e) => {
     e.preventDefault();
     console.log(e.target.value);
-    // get food item and name
+    // get food item and email
     //let food = document.getElementById("duncan_checkbox");
-    let name = document.getElementById("duncan_name").value;
+    let email = document.getElementById("duncan_email").value;
 
     //console.log("food items: " + food);
-    console.log("name for order: " + name);
+    console.log("email for order: " + email);
 
     // alert user of their order
-    alert("Thank you for your order, " + name + "!");
+    alert("Thank you for your order! Head to the Order Updates Chat to receive updates on your order!");
 
   };
 
   // Handler to track changes to the child input text
   const onChangeHandler = (e) => {
-    e.preventDefault();
-    console.log(e.target.value);
+    // e.preventDefault();
+    console.log("e.target: ", e.target);
   };
 
   // Add functions to get the hall from the pointer in food item
@@ -58,7 +58,7 @@ const DuncanForm = () => {
           <div>
             {foods.map((food) => (
               <div id="duncan_checkbox">
-                  <input type="checkbox" id={food.id}></input>
+                  <input type="checkbox" id={food.id} value={food.get("name")} onChange={onChangeHandler}></input>
                   {/* Using getter for food Object to display name */}
                   <label key={food.id}>
                     {food.get("name")} <b>(${food.get("price")})</b>
