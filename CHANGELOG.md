@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  
 ## [Unreleased] 
 
+## [0.4.0] - 2022-12-07
+
+### Changed
+-Duncan Menu & Form to add Stripe Checkout
 
 ## [0.3.0] - 2022-11-09 
  
