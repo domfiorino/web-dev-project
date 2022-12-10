@@ -20,3 +20,15 @@ export const getAllFoods = () => {
     return results;
   });
 };
+
+// READ operation - get all foods with dorm value in Parse class Food
+export const getAllFoodsByDormId = (dormPointer) => {
+  const Food = Parse.Object.extend("Food");
+  const query = new Parse.Query(Food);
+  query.equalTo("dorm", dormPointer);
+  return query.find().then((results) => {
+    // returns array of Food objects
+    console.log("results: ", results);
+    return results;
+  });
+};
