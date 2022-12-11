@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - OrderItemService to create, read, and delete OrderItem class objects to parse
 ### Changed
 - Duncan Menu & Form to add Stripe Checkout and submit order to back4app via OrderItem class
+- Duncan Form to auto populate with logged in users email in Checkout
 
 ## [0.3.0] - 2022-11-09 
  
