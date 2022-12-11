@@ -94,7 +94,7 @@ const DuncanForm = ({event}) => {
       mode: 'payment',
       successUrl: 'http://localhost:3000/success',
       cancelUrl: 'http://localhost:3000/cancel',
-      customerEmail: 'crimsonyaseen@gmail.com',
+      customerEmail: Parse.User.current().attributes.email,
     });
     console.warn(error.message);
 
