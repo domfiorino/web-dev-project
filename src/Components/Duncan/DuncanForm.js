@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Parse from "parse";
-import { Navigate } from "react-router-dom";
-import { getAllFoods, getFoodById, getAllFoodsByDormId } from "../../Common/Services/FoodService";
+import { getAllFoodsByDormId } from "../../Common/Services/FoodService";
 import { createOrderItem } from "../../Common/Services/OrderItemService";
 
 import DuncanMenu from "./DuncanMenu";
@@ -13,16 +12,12 @@ const DuncanForm = ({event}) => {
   // Variables in the state to hold data
   const [foods, setFoods] = useState([]);
   const [food, setFood] = useState([]);
-  const [name, setName] = useState();
   const [orderItem, setOrderItem] = useState([]);
 
   // UseEffect to run when the page loads to
   // obtain async data and render
   useEffect(() => {
-    // getAllFoods().then((foods) => {
-    //   console.log(foods);
-    //   setFoods(foods);         
-    // });
+
     let dormId = "vt1IOReUiq"; //Duncan's id
     let dormPointer = {
       __type: 'Pointer',
@@ -41,14 +36,10 @@ const DuncanForm = ({event}) => {
   const onClickHandler = (e) => {
     e.preventDefault();
     console.log(e.target.value);
-    // get food item ids and email
-    let userId = Parse.User.current().id;
-    console.log("id for order: " + userId);
-    let userPointer = {
-      __type: 'Pointer',
-      className: '_User',
-      objectId: userId
-    }
+
+    // get food items and email
+    let userEmail = Parse.User.current().attributes.email;
+    console.log("email for order: " + userEmail);
 
     var checkboxes = document.getElementsByName('food-checkbox');
     var result = "";
@@ -56,22 +47,18 @@ const DuncanForm = ({event}) => {
     for (var i = 0; i < checkboxes.length; i++) {
       // if the checkbox for the item is checked: 
       if (checkboxes[i].checked) {
-        // create a new OrderItem object with userEmail and pointer to food item  
-        let foodPointer = {
-          __type: 'Pointer',
-          className: 'Food',
-          objectId: checkboxes[i].id
-        }
-        createOrderItem(foodPointer, userPointer).then((orderItem) => {
+
+        // create a new OrderItem object with userEmail and food item 
+        let foodName = checkboxes[i].value;
+        createOrderItem(foodName, userEmail).then((orderItem) => {
           console.log(orderItem);
-          setFoods(orderItem);
+          setOrderItem(orderItem);
                 
         });
+
       }
     }
     handleCheckout(e);
-
-
   };
 
   // Handler to track changes to the child input text

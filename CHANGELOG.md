@@ -7,8 +7,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.4.0] - 2022-12-07
 
+### Added
+- ChatSetup and LiveChat to enable Live Query components using @parse/react
+- User and Admin accounts
+- OrdersModule to display emails with their ordered items
+- StripeService to load Stripe
+- OrderItemService to create, read, and delete OrderItem class objects to parse
 ### Changed
--Duncan Menu & Form to add Stripe Checkout
+- Duncan Menu & Form to add Stripe Checkout and submit order to back4app via OrderItem class
 
 ## [0.3.0] - 2022-11-09 
  

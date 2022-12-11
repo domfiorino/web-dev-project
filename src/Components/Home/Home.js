@@ -12,14 +12,3 @@ export default function HomeModule() {
     </div>
   );
 }
-
-// const HomeModule = () => {
-//   return (
-//     <div>
-//       This is the home module.
-//       {/* <HomeList /> */}
-//     </div>
-//   );
-// };
-
-// export default HomeModule;

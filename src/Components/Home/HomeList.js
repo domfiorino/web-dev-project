@@ -15,10 +15,6 @@ const HomeList = () => {
       setFoods(foods);
     });
 
-    // getById("OXsgE8Mhjc").then((food) => {
-    //   console.log(food);
-    //   setFood(food);
-    // });
   }, []);
 
   return (
